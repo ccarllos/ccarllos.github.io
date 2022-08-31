@@ -1,0 +1,125 @@
+* { /*anulando a margin e padding que vem como padrão*/
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: 'Raleway', sans-serif; /*fonte do texto fora dos botões*/
+    color: white; /*cor do texto fora dos botões*/
+}
+
+.code { /*desfocando a imagem de fundo*/
+    background-repeat: no-repeat; /*pra imagem não se repetir*/
+    position: fixed; /*pra imagem ficar fixada*/
+    top: 0; /*pra grudar a imagem no topo*/
+    left: 0; /*distancia da esquerda*/
+    right: 0; /*distancia da direita*/
+    z-index: -1; /*pra imagem ficar atrás do texto*/
+
+    display: block; /*criando um bloco pra imagem*/
+    height: 1000px; /*distancia altura que vai usar*/
+    width: 1500px; /*distancia largura que vai usar*/
+    -webkit-filter: blur(5px); /*daqui*/
+    filter: blur(5px); 
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px)/*até aqui deixa imagem desfocada e outros efeitos*/
+}
+
+.logo { /*CSS da foto*/
+    width: 80px; /*tamanho do logo*/
+    border-radius: 50px; /*deixano a imagem/borda redonda*/
+    border: 0.5px solid rgb(0, 0, 20); /*cor da borda + deixando a borda fina*/
+    box-shadow: 0px 0px 5px white; /*deu o brilho no fundo da imagem*/
+}
+
+h1 {
+    font-family: 'Architects Daughter', cursive; /*fonte do texto*/
+    font-weight: 100;  /*aumenta ou diminui a grossura da fonte, aqui ta diminuindo*/
+    font-size: 24px; /*tamanho do texto do h1*/
+    margin-bottom: 2px; /*diminuiu a distancia da margem bottom (baixo) para o h2*/
+}
+
+h2 {
+    font-size: 16px; /*tamanho do texto do h2*/
+}
+
+.perfil { /*estilo da div. vai da foto até o h2*/
+    margin-top: 20px; /*distancia da div perfil para o topo, pois foi cancelado no (*) */
+    text-align: center; /*centralizando o texto*/
+}
+
+.social { /*essa tag social é a geral, sem nada em específico*/
+    display: flex; /*deixando os icones lado a lado*/
+    justify-content: space-around; /*tipo de espaço dos icones*/
+    list-style: none; /*tirando as bolinhas que vem junto com a lista*/
+    margin: 15px 100px; /*15px de espaço pro h2, 100px pra deixar eles mais próximos*/
+}
+
+.social img { /*editando só o IMG da tag social. Pois se eu coloco apenas "img", eu editaria todos os "img" da minha página, então aqui eu só edito o que tá dentro de social.*/ 
+    width: 33px; /*tamanho dos icones*/
+}
+
+.links { /*css dos botões*/
+    list-style: none; /*tirando as bolinhas de lista*/
+}
+
+.links li {  /*editando só a LI de links. Pois se eu coloco apenas LI, eu editaria todos os LI da minha página, então aqui eu só edito o que tá dentro de links.*/
+    margin: 15px 20px; /*distancia de um link para o outro*/
+    
+}
+
+.links li a {  /*estilizando só os links da tag ancora (a). Pois se eu coloco apenas "a", eu editaria todos os "a" da minha página, então aqui eu só edito o que tá dentro de links..*/
+    display: block; /*A tag "a" já vem com o padrão isso display inline, ou seja, ela se comporta pra ficar tudo na mesma linha, e isso tranforma ela em blocos separados, tipo uma div*/
+    text-align: center; /*centralizando o texto*/
+    background: rgba(255, 255, 255, 0); /*cor do fundo*/
+    padding: 15px 20px;   /*espaçamento interno,distância do topo e distância baixo */    
+    border-radius: 5px;   /*deixando a borda redonda*/
+    text-decoration: none;  /*tirando o sublinhado de link*/
+    color: white;  /*cor do texto*/
+    font-weight: bolder;  /*instensificando a cor do texto*/
+    box-shadow: 0px 0px 5px white;  /*brilho do bloco*/
+}
+
+.links li a span { /*editando só o span. Pois se eu coloco apenas span, eu editaria todos os span da minha página, então aqui eu só edito o que tá dentro de links.*/
+    color: #ffffffff;  /*cor do texto*/
+    font-size: 12px;  /*tamanho do texto*/
+    display: block;  /*criando um bloco para o texto ir pra outra linha pra não usar o br*/
+    text-align: center;  /*centralizando o texto*/
+    margin-top: 5px;  /*distancia para o titulo*/
+    font-weight: 100;  /*deixado a cor da letra mais fraca*/
+}
+
+.links-free {
+    list-style: none;  /*tirando as bolinha de lista*/
+    margin-top: 45px;  /*espaço que tem dos cursos pagos para o grátis*/
+}
+.links-free li {
+    margin: 15px 20px;  /*distancia de um link para o outro*/
+}
+
+.links-free li a {
+    display: block; /*A tag "a" já vem com o padrão isso display inline, ou seja, ela se comporta pra ficar tudo na mesma linha, e isso tranforma ela em blocos separados, tipo uma div*/
+    text-align: center; /*centralizando o texto*/
+    background: rgba(255, 255, 255, 0); /*cor do fundo*/
+    padding: 15px 20px;   /*espaçamento interno,distância do topo e distância baixo */    
+    border-radius: 5px;   /*deixando a borda redonda*/
+    text-decoration: none;  /*tirando o sublinhado de link*/
+    color: white;  /*cor do texto*/
+    font-weight: bolder;  /*instensificando a cor do texto*/
+    box-shadow: 0px 0px 5px white;  /*brilho do bloco*/
+}
+
+.links-free li a span {
+    color: #ffffffff;  /*cor do texto*/
+    font-size: 12px;  /*tamanho do texto*/
+    display: block;  /*criando um bloco para o texto ir pra outra linha pra não usar o br*/
+    text-align: center;  /*centralizando o texto*/
+    margin-top: 5px;  /*distancia para o titulo*/
+    font-weight: 100;  /*deixado a cor da letra mais fraca*/
+}
+
+.fim {
+    text-align: center;  /*centralizando o texto*/
+    margin-top: 20px;  /*espacamento/distancia para os botões*/
+}
