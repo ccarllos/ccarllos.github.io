@@ -1,0 +1,75 @@
+* { /*serve para anular as coisas, então estou anulando a margin e padding*/
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%; /*quando eu coloquei o grandiente, ficou se repetindo, então eu to informando que o html e o body tem o mesmo tamanho, isso anula a repetição*/
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: white; /*todo o texto que está fora do botão vai ser branco*/
+    background: rgb(17,29,210);
+    background: linear-gradient(90deg, rgba(17,29,210,1) 0%, rgba(3,231,150,1) 100%);
+}
+
+.avatar { /*css da foto*/
+    width: 80px; /*mexe no tamanho da imagem*/
+    border-radius: 50px; /*deixa a imagem/borda redonda*/
+    border: 3px solid white; /*borda fininha em volta da imagem*/
+    box-shadow: 0px 0px 8px white; /*deu o brilho na imagem*/
+}
+
+h1 { 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; /*aumenta ou diminui a grossura da fonte, aqui ta diminuindo*/
+    font-size: 30px; /*diminuindo a tamanho da fonte*/
+    margin-top: 10px;
+    margin-bottom: 5px; /*diminuiu a distancia da margem bottom (baixo) para o h2*/
+
+}
+
+h2 {
+    font-size: 16px; /*diminuindo a tamanho da fonte*/
+}
+
+.profile { /*estilo da div. vai da foto até o h2*/
+    margin-top: 15px; /*descolando a imagem/div do topo, pois foi tudo cancelado no *, e não foi colocado para no h1 pra tirar a imagem do topo, porque a div profile é o pai do h1 na indentação*/
+    text-align: center; /*texto no centro*/
+}
+
+.social { /*essa tag social é a geral, sem nada em específico*/
+    display: flex; /*Vai fazer todos os filhos dele ficar lado a lado (flex)*/
+    justify-content: space-around; /*adiciona espacamento ao redor deles*/
+    list-style: none; /*tira as bolinhas da lista*/
+    margin: 20px 0px;  /*15px de espaço pro h2, 0 px pro resto*/
+}
+
+.social img { /*estilizando apenas o IMG da tag social. Pois se eu coloco apenas "img", eu editaria todos os "img" da minha página, então aqui eu só edito o que tá dentro de social.*/ 
+    width: 33px; /*estou diminuindo a imagem*/
+}
+.links-list {  /*css dos botões*/
+    list-style: none; /*tirando o botão de tópico que vem junto com a lista*/
+}
+
+.links-list li {  /*estilizando a LI pois ela é o pai dos links. Pois se eu coloco apenas LI, eu editaria todos os LI da minha página, então aqui eu só edito o que tá dentro de links-list.*/
+    margin: 20px 20px;  /*distancia de um link para o outro*/
+}
+
+.links-list li a { /*estilizando os links da tag ancora (a). Pois se eu coloco apenas "a", eu editaria todos os "a" da minha página, então aqui eu só edito o que tá dentro de links-list.*/
+    display: block; /*A tag "a" já vem com o padrão isso display inline, ou seja, ela se comporta pra ficar tudo na mesma linha, e isso tranforma ela em blocos separados, tipo uma div*/
+    background: white; /*cor do fundo*/
+    padding: 15px 20px; /*espaçamento interno,distância do topo e distância baixo */    
+    border-radius: 4px; /*deixando a borda redonda*/
+    text-decoration: none; /*remove o sublinhado que fica de link*/
+    color:  rgb(54, 77, 204); /*cor do texto*/
+    font-weight: bold; /*deixando a fonte do título mais grossa*/
+    box-shadow: 0px 0px 5px white;  /*brilho do bloco*/
+}
+.links-list li a span { /*estilizando o span. Pois se eu coloco apenas span, eu editaria todos os span da minha página, então aqui eu só edito o que tá dentro de links-list.*/
+    color: gray;
+    display: block; /*cria um novo bloco para esses texto estilizados, empurrando eles para baixo, ou seja, pulando linha, ao invés de colocar o <br> no html*/
+    margin-top: 5px;  /*to empurrando esse texto pra baixo pra não ficar colado no título*/
+    font-weight: 300;
+}
